@@ -42,6 +42,7 @@ def generateCMakeLists(casadi_fns):
         fn_filepath = f"codegen/{f.name()}.cu"
         str_sources += f"set({fn_source_name} {fn_filepath})\n"
         str_libraries += f"add_library({f.name()} SHARED ${{{fn_source_name}}})\n"
+        str_libraries += f"set_target_properties({f.name()} PROPERTIES LINKER_LANGUAGE CUDA)\n"
         str_libraries += f"target_link_libraries({f.name()})\n"
 
     cmake_strings['sources'] = str_sources

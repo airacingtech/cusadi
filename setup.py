@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+(from setuptools import setup, find_packages
 
 setup(
     name="cusadi",
@@ -6,9 +6,11 @@ setup(
     description="A library for generating and compiling Casadi functions with GPU support.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    author="Se Hwan Jeon",
+    author="Se Hwan Jeon (original author)",
     author_email="sehwan@mit.edu",
-    url="https://github.com/se-hwan/cusadi",
+    maintainer="Kevin Shin",
+    maintainer_email="d3shin@ucsd.edu",
+    url="https://github.com/airacingtech/cusadi",
     packages=find_packages(),
     # package_data={'test': ['test.txt']},
     include_package_data=True,
@@ -25,4 +27,5 @@ setup(
         'torch'
     ],
     setup_requires=['setuptools'],
+)
 )
